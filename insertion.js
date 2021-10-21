@@ -18,7 +18,7 @@ async function insertion_sort(delay2 = 2000 / (arr_size.value * speed.value)) {
     var special = document.querySelectorAll(".special");
     for (i = 1; i < no_of_bar; i++) {
         key = arr[i];
-        special[i].style.background = "blue";
+        special[i].style.background = "#f15eff";
         await new Promise((resolve) =>
         setTimeout(() => {
             resolve();
@@ -26,23 +26,23 @@ async function insertion_sort(delay2 = 2000 / (arr_size.value * speed.value)) {
 
         j = i - 1;
         while (j >= 0 && arr[j] > key) {
-            special[j].style.background = "red";
+            special[j].style.background = "#dd5c5c";
             if (j + 1 != i) 
-                special[j + 1].style.background = "red";
+                special[j + 1].style.background = "#dd5c5c";
 
             await new Promise((resolve) =>
                 setTimeout(() => {
                 resolve();
                 }, delay2)
             );
-            
+
             await swap(special[j + 1], special[j]);
             special = document.querySelectorAll(".special");
             arr[j + 1] = arr[j];
-            special[j].style.background = "yellow";
+            special[j].style.background = "#ebd35e";
 
             if (j + 1 != i) 
-                special[j + 1].style.background = "yellow";
+                special[j + 1].style.background = "#ebd35e";
 
             j = j - 1;
         }
@@ -57,7 +57,7 @@ async function insertion_sort(delay2 = 2000 / (arr_size.value * speed.value)) {
 
     var inc = 0.1;
     for (var i = no_of_bar - 1; i >= 0; i--) {
-        special[i].style.background = "green";
+        special[i].style.background = "#6cdb7b";
         await new Promise((resolve) =>
         setTimeout(() => {
             resolve();

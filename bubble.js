@@ -18,8 +18,8 @@ async function bubble_sort(delay2 = 2000 / (arr_size.value * speed.value)) {
     var no_of_bar = arr_size.value;
     for (var i = 0; i < no_of_bar - 1; i++) {
         for (var j = 0; j < no_of_bar - 1 - i; j++) {
-            special[j].style.background = "red";
-            special[j + 1].style.background = "red";
+            special[j].style.background = "#dd5c5c";
+            special[j + 1].style.background = "#dd5c5c";
             await new Promise((resolve) =>
                 setTimeout(() => {
                 resolve();
@@ -34,15 +34,15 @@ async function bubble_sort(delay2 = 2000 / (arr_size.value * speed.value)) {
                 special = document.querySelectorAll(".special");
             }
 
-            special[j].style.background = "yellow";
-            special[j + 1].style.background = "yellow";
+            special[j].style.background = "#ebd35e";
+            special[j + 1].style.background = "#ebd35e";
             await new Promise((resolve) =>
                 setTimeout(() => {
                 resolve();
                 }, delay2)
             );
         }
-        special[no_of_bar - i - 1].style.background = "green";
+        special[no_of_bar - i - 1].style.background = "#6cdb7b";
     }
-    special[0].style.background = "green";
+    special[0].style.background = "#6cdb7b";
 }

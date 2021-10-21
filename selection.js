@@ -22,11 +22,11 @@ async function selection_sort(delay1=3000/(speed.value*arr_size.value), delay2=3
     for(var i=0;i<no_of_bar-1;i++)
     {
         var min_idx=i;
-        special[i].style.background="red";
-        special[min_idx].style.background="red";
+        special[i].style.background="#dd5c5c";
+        special[min_idx].style.background="#dd5c5c";
         for(var j=i+1;j<no_of_bar;j++)
         {
-            special[j].style.background="blue";
+            special[j].style.background="#f15eff";
             await new Promise(resolve =>
                 setTimeout(() => {
                 resolve();
@@ -35,15 +35,15 @@ async function selection_sort(delay1=3000/(speed.value*arr_size.value), delay2=3
             if(arr[j]<arr[min_idx])
             {
                 if(min_idx!=i)
-                special[min_idx].style.background="yellow";
+                special[min_idx].style.background="#ebd35e";
                 min_idx=j;
-                special[min_idx].style.background="red";
+                special[min_idx].style.background="#dd5c5c";
             }
             if(j!=min_idx)
-            special[j].style.background="yellow";
+            special[j].style.background="#ebd35e";
         }
 
-        special[min_idx].style.background="red";
+        special[min_idx].style.background="#dd5c5c";
 
 
         await new Promise(resolve =>
@@ -52,13 +52,13 @@ async function selection_sort(delay1=3000/(speed.value*arr_size.value), delay2=3
         }, delay2));
 
         await swap(special[min_idx],special[i]);
-        special[min_idx].style.background="yellow";
-        special[i].style.background="green";
+        special[min_idx].style.background="#ebd35e";
+        special[i].style.background="#6cdb7b";
         var temp=arr[min_idx];
         arr[min_idx]=arr[i];
         arr[i]=temp;
         special = document.querySelectorAll(".special");
     }
     console.log(no_of_bar);
-    special[no_of_bar-1].style.background="green";
+    special[no_of_bar-1].style.background="#6cdb7b";
 }

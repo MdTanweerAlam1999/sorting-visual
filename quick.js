@@ -18,7 +18,7 @@ async function partition(low,high,delay2=2000/(arr_size.value*speed.value))
 {
     var special = document.querySelectorAll(".special");
   
-    special[high].style.background="red";
+    special[high].style.background="#dd5c5c";
     await new Promise(resolve =>
       setTimeout(() => {
         resolve();
@@ -30,7 +30,7 @@ async function partition(low,high,delay2=2000/(arr_size.value*speed.value))
     for(var j=low;j<=high-1;j++)
     {
         
-        special[j].style.background="red";
+        special[j].style.background="#dd5c5c";
         await new Promise(resolve =>
             setTimeout(() => {
             resolve();
@@ -49,12 +49,12 @@ async function partition(low,high,delay2=2000/(arr_size.value*speed.value))
             arr[j]=temp;
             special=document.querySelectorAll(".special");
         
-            special[i].style.background="blue";
+            special[i].style.background="#f15eff";
         }
     
         if(i!=j)
         {
-            special[j].style.background="yellow";
+            special[j].style.background="#ebd35e";
             await new Promise(resolve =>
                 setTimeout(() => {
                 resolve();
@@ -76,15 +76,15 @@ async function partition(low,high,delay2=2000/(arr_size.value*speed.value))
     special=document.querySelectorAll(".special");
     
     for(var k=low;k<=i;k++)
-        special[k].style.background="yellow";
+        special[k].style.background="#ebd35e";
 
     await new Promise(resolve =>
     setTimeout(() => {
     resolve();
     }, delay2));
 
-    special[high].style.background="yellow";
-    special[i+1].style.background="green";
+    special[high].style.background="#ebd35e";
+    special[i+1].style.background="#6cdb7b";
     count++;
 
     await new Promise(resolve =>

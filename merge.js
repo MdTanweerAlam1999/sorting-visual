@@ -34,8 +34,8 @@ async function merge_arr(low,mid,high,delay2=3000/(arr_size.value*speed.value))
     {
         special = document.querySelectorAll(".special");
         tempi=i,tempj=j;
-        special[tempi].style.background="red";
-        special[tempj].style.background="red";
+        special[tempi].style.background="#dd5c5c";
+        special[tempj].style.background="#dd5c5c";
 
         await new Promise(resolve =>
         setTimeout(() => {
@@ -68,18 +68,18 @@ async function merge_arr(low,mid,high,delay2=3000/(arr_size.value*speed.value))
             mid++;
         }
 
-        special[tempj].style.background="yellow";
-        special[tempi].style.background="yellow";
+        special[tempj].style.background="#ebd35e";
+        special[tempi].style.background="#ebd35e";
 
         if(low==0&&high==no_of_bar-1) 
-            special[i].style.background="green";
+            special[i].style.background="#6cdb7b";
         i++;
         
     }
     if(low==0&&high==no_of_bar-1)
     {
         for(var k=0;k<=no_of_bar-1;k++)
-        special[k].style.background="green";
+        special[k].style.background="#6cdb7b";
     }
 }
 
